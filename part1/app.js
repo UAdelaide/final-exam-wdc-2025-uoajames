@@ -115,7 +115,16 @@ let db;
         ('Bella', 'small', (SELECT user_id FROM Users WHERE username = 'carol123' AND role = 'owner')),
         ('Princess', 'large', (SELECT user_id FROM Users WHERE username = 'alice123' AND role = 'owner')),
         ('Destroyer', 'small', (SELECT user_id FROM Users WHERE username = 'barto123' AND role = 'owner')),
-        
+        ('Dawg', 'medium', (SELECT user_id FROM Users WHERE username = 'barto123' AND role = 'owner'))
+      `);
+
+      await db.query(`
+        INSERT INTO Dogs (name, size, owner_id) VALUES
+        ('Max', 'medium', (SELECT user_id FROM Users WHERE username = 'alice123' AND role = 'owner')),
+        ('Bella', 'small', (SELECT user_id FROM Users WHERE username = 'carol123' AND role = 'owner')),
+        ('Princess', 'large', (SELECT user_id FROM Users WHERE username = 'alice123' AND role = 'owner')),
+        ('Destroyer', 'small', (SELECT user_id FROM Users WHERE username = 'barto123' AND role = 'owner')),
+        ('Dawg', 'medium', (SELECT user_id FROM Users WHERE username = 'barto123' AND role = 'owner'))
       `);
 
     }
