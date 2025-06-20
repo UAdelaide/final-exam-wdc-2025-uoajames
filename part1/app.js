@@ -6,13 +6,6 @@ var mysql = require('mysql2/promise');
 
 var app = express();
 
-const port = 8080;
-app.get('/', (req, res) => res.send('Hello World!'));
-
-app.listen(port, () => {
-  console.log(`Test server running on port ${port}`);
-});
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
