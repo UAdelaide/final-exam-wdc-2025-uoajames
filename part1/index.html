@@ -14,14 +14,15 @@
     <script>
         Vue.createApp({
             data() {
-                dogUrl: ''
+                imageUrl: ''
             }
         },
         methods: {
             async loadImage() {
                 try {
                     const res = await fetch('https://dog.ceo/api/breeds/image/random');
-                    const json = await.res
+                    const json = await res.json();
+                    this.imageUrl = json.message;
                 }
             }
         }
