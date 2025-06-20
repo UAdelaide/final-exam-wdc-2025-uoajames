@@ -107,7 +107,7 @@ let db;
         ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
         ('carol123', 'carol@example.com', 'hashed789', 'owner'),
         ('barto123', 'barto@example.com', 'hashedbarto', 'owner'),
-        
+
       `);
 
       await db.query(`
@@ -132,7 +132,7 @@ let db;
       await db.query(`
         INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments) VALUES
         ((SELECT request_id FROM WalkRequests WHERE requested_time = '2025-06-10 07:45:00'), (SELECT user_id FROM Users WHERE username = 'bobwalker'), (SELECT user_id FROM Users WHERE username = 'alice123'), 5, 'Amazing!'),
-        ((SELECT request_id FROM WalkRequests WHERE requested_time = '2025-06-09 10:30:00'), (SELECT user_id FROM Users WHERE username = 'barto123'), (SELECT user_id FROM Users WHERE username = 'alice123'), 3, 'Alright')
+        ((SELECT request_id FROM WalkRequests WHERE requested_time = '2025-06-09 10:30:00'), (SELECT user_id FROM Users WHERE username = 'herbert123'), (SELECT user_id FROM Users WHERE username = 'alice123'), 3, 'Alright')
       `);
 
     }
