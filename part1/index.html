@@ -14,16 +14,16 @@
     <script>
         Vue.createApp({
         data() {
-        return {
-          dogUrl: ''
-        }
-      },
-      methods: {
-        async loadDog() {
-          try {
-            const res = await fetch('https://dog.ceo/api/breeds/image/random');
-            const json = await res.json();
-            this.dogUrl = json.message;
+            return {
+                dogUrl: ''
+            }
+        },
+        methods: {
+            async loadDog() {
+            try {
+                const res = await fetch('https://dog.ceo/api/breeds/image/random');
+                const json = await res.json();
+                this.dogUrl = json.message;
           } catch (e) {
             console.error('Failed to fetch dog:', e);
           }
