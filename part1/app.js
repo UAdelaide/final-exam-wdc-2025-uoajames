@@ -128,12 +128,10 @@ let db;
       `);
 
       await db.query(`
-        INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES
-        ((SELECT dog_id FROM Dogs WHERE name = 'Max'), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
-        ((SELECT dog_id FROM Dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
-        ((SELECT dog_id FROM Dogs WHERE name = 'Princess'), '2025-06-10 07:45:00', 30, 'Los Santos', 'completed'),
-        ((SELECT dog_id FROM Dogs WHERE name = 'Destroyer'), '2025-06-10 10:00:00', 50, 'Mount Chiliad', 'open'),
-        ((SELECT dog_id FROM Dogs WHERE name = 'Dawg'), '2025-06-10 11:30:00', 40, 'High Hrothgar', 'cancelled')
+        INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments) VALUES
+    ((SELECT request_id FROM WalkRequests WHERE requested_time = '2025-06-01 08:00:00'), (SELECT user_id FROM Users WHERE username = 'bobwalker'), (SELECT user_id FROM Users WHERE username = 'alice123'), 5, 'Excellent'),
+    ((SELECT request_id FROM WalkRequests WHERE requested_time = '2025-06-02 09:00:00'), (SELECT user_id FROM Users WHERE username = 'bobwalker'), (SELECT user_id FROM Users WHERE username = 'alice123'), 4, 'Very good'),
+    ((SELECT request_id FROM WalkRequests WHERE requested_time = '2025-06-04 16:00:00'), (SELECT user_id FROM Users WHERE username = 'carolwalker'), (SELECT user_id FROM Users WHERE username = 'daveowner'), 3, 'Okay')
       `);
 
     }
