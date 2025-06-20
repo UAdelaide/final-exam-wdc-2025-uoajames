@@ -6,7 +6,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <div id="app" style="margin:auto;">
+    <div id="load">
         <h1 style="top:%;text-align:right;font-size:90px;color:red;">dog of the day</h1>
         <img :src="imageUrl" alt="Dog Image Randomiser" v-if="imageUrl" style="position:absolute;top:10%;left:35%" width="500" height="500"/>
         <button type="button" @click="loadImage" style="position:absolute;top:20%;left:85%;font-size:9px;color:red">Button</button>
@@ -33,7 +33,7 @@
         mounted() {
             this.loadImage();
         }
-        }).mount('#app');
+        }).mount('#load');
     </script>
 </body>
 </html>
