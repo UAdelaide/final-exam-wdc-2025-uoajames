@@ -151,7 +151,7 @@ app.get('/api/dogs', async (req, res) => {
 app.get('/api/walkrequests/open', async (req, res) => {
   try {
     const [rows] = await db.execute(`
-        SELECT WR.
+        SELECT WR.request_id, D.
         `);
     res.json(rows);
   } catch (err) {
