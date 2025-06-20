@@ -24,10 +24,11 @@
                     const json = await res.json();
                     this.imageUrl = json.message;
                 } catch(e) {
-                    console.error('Failed to fetch image', e)
+                    console.error('Failed to fetch image', e);
                 }
             }
-        }
+        },
+        mounted()
         })
     </script>
 </body>
