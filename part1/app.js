@@ -125,7 +125,7 @@ let db;
         ((SELECT dog_id FROM Dogs WHERE name = 'Princess'), '2025-06-10 07:45:00', 30, 'Los Santos', 'completed'),
         ((SELECT dog_id FROM Dogs WHERE name = 'Destroyer'), '2025-06-10 10:00:00', 50, 'Mount Chiliad', 'open'),
         ((SELECT dog_id FROM Dogs WHERE name = 'Dawg'), '2025-06-10 11:30:00', 40, 'High Hrothgar', 'cancelled')
-        ((SELECT dog_id FROM Dogs WHERE name = 'Princess'), '2025-06-09 11:30:00', 40, 'High Hrothgar', 'cancelled')
+        ((SELECT dog_id FROM Dogs WHERE name = 'Princess'), '2025-06-09 10:30:00', 40, 'Los Santos', 'completed')
       `);
 
       await db.query(`
