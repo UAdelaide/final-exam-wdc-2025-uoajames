@@ -29,6 +29,10 @@
             } catch (e) {
                 console.error('Failed to fetch image:', e);
             }
+            },
+            handleClick() {
+                this.loadImage();
+                this.clicked = !this.clicked;
             }
         },
         mounted() {
