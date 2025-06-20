@@ -171,6 +171,8 @@ app.get('/api/walkers/summary', async (req, res) => {
         COUNT(R.rating_id) AS total_ratings,
         ROUND(AVG(R.rating), 1) AS average_rating,
         (
+          SELECT COUNT(*)
+          FROM WalkRatings R2
         )
         `);
     res.json(rows);
