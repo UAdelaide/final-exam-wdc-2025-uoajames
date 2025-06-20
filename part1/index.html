@@ -13,25 +13,26 @@
     </div>
     <script>
         Vue.createApp({
-            data() {
-                imageUrl: ''
-                }
-            },
-            methods: {
-                async loadImage() {
-                    try {
-                        const res = await fetch('https://dog.ceo/api/breeds/image/random');
-                        const json = await res.json();
-                        this.imageUrl = json.message;
-                    } catch(e) {
-                        console.error('Failed to fetch image', e);
-                    }
-                }
-            },
-            mounted() {
-                this.loadImage();
-            }
-        }).mount('#load')
+        data() {
+        return {
+          dogUrl: ''
+        }
+      },
+      methods: {
+        async loadDog() {
+          try {
+            const res = await fetch('https://dog.ceo/api/breeds/image/random');
+            const json = await res.json();
+            this.dogUrl = json.message;
+          } catch (e) {
+            console.error('Failed to fetch dog:', e);
+          }
+        }
+      },
+      mounted() {
+        this.loadDog();
+      }
+    }).mount('#app');
     </script>
 </body>
 </html>
