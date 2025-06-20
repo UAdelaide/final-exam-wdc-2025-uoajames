@@ -129,8 +129,8 @@ let db;
 
       await db.query(`
         INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments) VALUES
-    ((SELECT request_id FROM WalkRequests WHERE requested_time = '2025-06-01 08:00:00'), (SELECT user_id FROM Users WHERE username = 'bobwalker'), (SELECT user_id FROM Users WHERE username = 'alice123'), 5, 'Excellent'),
-    ((SELECT request_id FROM WalkRequests WHERE requested_time = '2025-06-02 09:00:00'), (SELECT user_id FROM Users WHERE username = 'bobwalker'), (SELECT user_id FROM Users WHERE username = 'alice123'), 4, 'Very good'),
+    ((SELECT request_id FROM WalkRequests WHERE requested_time = '2025-06-01 08:00:00'), (SELECT user_id FROM Users WHERE username = 'bobwalker'), (SELECT user_id FROM Users WHERE username = 'alice123'), 5, 'Amazing!'),
+    ((SELECT request_id FROM WalkRequests WHERE requested_time = '2025-06-02 09:00:00'), (SELECT user_id FROM Users WHERE username = 'bobwalker'), (SELECT user_id FROM Users WHERE username = 'alice123'), 4, 'Satisfied'),
     ((SELECT request_id FROM WalkRequests WHERE requested_time = '2025-06-04 16:00:00'), (SELECT user_id FROM Users WHERE username = 'carolwalker'), (SELECT user_id FROM Users WHERE username = 'daveowner'), 3, 'Okay')
       `);
 
