@@ -24,15 +24,15 @@
                 const res = await fetch('https://dog.ceo/api/breeds/image/random');
                 const json = await res.json();
                 this.dogUrl = json.message;
-          } catch (e) {
-            console.error('Failed to fetch dog:', e);
-          }
+            } catch (e) {
+                console.error('Failed to fetch dog:', e);
+            }
+            }
+        },
+        mounted() {
+            this.loadDog();
         }
-      },
-      mounted() {
-        this.loadDog();
-      }
-    }).mount('#app');
+        }).mount('#app');
     </script>
 </body>
 </html>
