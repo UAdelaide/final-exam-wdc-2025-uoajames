@@ -167,7 +167,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
 app.get('/api/walkers/summary', async (req, res) => {
   try {
     const [rows] = await db.execute(`
-        SELECT U.
+        SELECT U.username AS walker_username, 
         `);
     res.json(rows);
   } catch (err) {
