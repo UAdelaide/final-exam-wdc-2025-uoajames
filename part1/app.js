@@ -137,9 +137,9 @@ let db;
 app.get('/api/dogs', async (req, res) => {
   try {
     const [rows] = await db.execute(`
-        SELECT Dogs.name AS dog_name, Dogs.size, Users.username AS owner_username
-        FROM Dogs
-        JOIN Users ON Dogs.owner_id = Users.user_id
+        SELECT D.name AS dog_name, D.size, U.username AS owner_username
+        FROM Dogs D
+        JOIN Users U ON Dogs.owner_id = Users.user_id
         `);
     res.json(rows);
   } catch (err) {
@@ -167,7 +167,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
 app.get('/api/walkers/summary', async (req, res) => {
   try {
     const [rows] = await db.execute(`
-        SELECT 
+        SELECT U.
         `);
     res.json(rows);
   } catch (err) {
