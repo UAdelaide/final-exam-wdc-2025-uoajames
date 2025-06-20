@@ -111,10 +111,7 @@ let db;
 
       await db.query(`
         INSERT INTO Dogs (name, size, owner_id) VALUES
-        ('alice123', 'alice@example.com', 'hashed123', 'owner'),
-        ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
-        ('carol123', 'carol@example.com', 'hashed789', 'owner'),
-        ('barto123', 'barto@example.com', 'hashedbarto', 'owner')
+        ('Max', 'medium', (SELECT user_id FROM Users WHERE username = 'alice123' AND role = 'owner')),
       `);
 
     }
