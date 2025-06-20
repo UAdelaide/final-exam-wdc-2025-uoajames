@@ -147,11 +147,11 @@ app.get('/api/dogs', async (req, res) => {
   }
 });
 
-// Route to return open WalkReqests as JSON
+// Route to return open walk requests as JSON
 app.get('/api/walkrequests/open', async (req, res) => {
   try {
     const [rows] = await db.execute(`
-        SELECT
+        SELECT 
         `);
     res.json(rows);
   } catch (err) {
