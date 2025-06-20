@@ -176,6 +176,7 @@ app.get('/api/walkers/summary', async (req, res) => {
           JOIN WalkRequests WR ON R.request_id = WR.request_id
           WHERE R.status = 'completed'
         ) AS completed_walks
+         
         `);
     res.json(rows);
   } catch (err) {
