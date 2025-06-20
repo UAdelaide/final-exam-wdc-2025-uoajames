@@ -173,6 +173,8 @@ app.get('/api/walkers/summary', async (req, res) => {
         (
           SELECT COUNT(*)
           FROM WalkRatings R
+          JOIN WalkRequests WR
+          
         )
         `);
     res.json(rows);
