@@ -107,7 +107,7 @@ let db;
         ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
         ('carol123', 'carol@example.com', 'hashed789', 'owner'),
         ('barto123', 'barto@example.com', 'hashedbarto', 'owner'),
-
+        (')
       `);
 
       await db.query(`
