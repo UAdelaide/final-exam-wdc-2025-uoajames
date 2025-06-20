@@ -120,7 +120,7 @@ let db;
 
       await db.query(`
         INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES
-        ('Max', 'medium', (SELECT user_id FROM Users WHERE username = 'alice123' AND role = 'owner')),
+        ((SELECT dog_id FROM Dogs WHERE name = 'Max'), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
         ('Bella', 'small', (SELECT user_id FROM Users WHERE username = 'carol123' AND role = 'owner')),
         ('Princess', 'large', (SELECT user_id FROM Users WHERE username = 'alice123' AND role = 'owner')),
         ('Destroyer', 'small', (SELECT user_id FROM Users WHERE username = 'barto123' AND role = 'owner')),
