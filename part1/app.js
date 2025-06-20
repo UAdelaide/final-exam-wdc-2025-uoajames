@@ -122,6 +122,8 @@ let db;
         INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES
         ((SELECT dog_id FROM Dogs WHERE name = 'Max'), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
         ((SELECT dog_id FROM Dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
+        ((SELECT dog_id FROM Dogs WHERE name = 'Princess'), '2025-06-10 07:45:00', 30, 'Los Santos', 'completed'),
+        ((SELECT dog_id FROM Dogs WHERE name = 'Destroyer'), '2025-06-10 10:00:00', 50, 'Mount Chiliad', 'open'),
         
       `);
 
