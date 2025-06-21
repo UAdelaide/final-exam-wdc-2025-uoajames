@@ -5,15 +5,13 @@ const { Dog } = require('./models');
 router.get('/dogs', async (req, res) => {
     try {
         const dogs = await Dog.find();
-    }
 
-    const response = await fetch('https://dog.ceo/api/breeds/image/random');
-    const data = await response.json();
-    const randomImage = data.message;
+        const response = await fetch('https://dog.ceo/api/breeds/image/random');
+        const data = await response.json();
+        const randomImage = data.message;
 
-    res.json({ dogs, randomImage });
-    }
-    
+        res.json({ dogs, randomImage });
+    } 
 })
 
 module.exports = router;
