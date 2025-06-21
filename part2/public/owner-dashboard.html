@@ -140,7 +140,7 @@
         const dogs = ref([])
         async function loadDogs() {
           try {
-            const res = await fetch('/api/dogs/ownedDogs', {
+            const res = await fetch('/api/users/ownedDogs', {
               credentials: 'same-origin'
             });
             if (!res.ok) throw new Error('Failed to load dogs');
