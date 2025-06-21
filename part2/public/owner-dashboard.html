@@ -100,7 +100,9 @@
             });
             if (!res.ok) throw new Error('Logout failed');
             window.location.href = '/';
-          } catch (err)
+          } catch (err) {
+            alert(err.message);
+          }
         }
 
         async function submitWalkRequest() {
