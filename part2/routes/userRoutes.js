@@ -40,6 +40,7 @@ router.post('/login', async (req, res) => {
   const { username, password } = req.body;
 
   try {
+    // Changed email to username
     const [rows] = await db.query(`
       SELECT user_id, username, role FROM Users
       WHERE username = ? AND password_hash = ?
@@ -52,7 +53,7 @@ router.post('/login', async (req, res) => {
     const user = rows[0];
     req.session.user = user;
 
-    // Redirect user to 
+    // Redirect user to designated dashboard
     if (user.role == 'owner') {
       return res.redirect(302, '/owner-dashboard.html');
     } else {
