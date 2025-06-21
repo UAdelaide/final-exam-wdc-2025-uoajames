@@ -63,6 +63,7 @@
           const res = await fetch('/api/dogs');
           const dogs = await res.json();
 
+          // Attach randomised dog image
           const dogImage = await Promise.all(
             dogs.map(async (dog) => {
               try {
