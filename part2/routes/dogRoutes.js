@@ -6,7 +6,7 @@ const db = require('../models/db');
 router.get('/', async (req, res) => {
   try {
     const [rows] = await db.execute(`
-        SELECT D.name AS dog_name, D.size, U.username AS owner_username
+        SELECT D.dog_id, D.name AS dog_name, D.size, U.username AS owner_username
         FROM Dogs D
         JOIN Users U ON D.owner_id = U.user_id
     `);
