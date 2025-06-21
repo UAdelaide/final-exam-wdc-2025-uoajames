@@ -144,6 +144,9 @@
               credentials: 'same-origin'
             });
             if (!res.ok) throw new Error('Failed to load dogs');
+            dogs.value = await res.json();
+          } catch (err) {
+            
           }
         }
 
