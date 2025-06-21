@@ -82,6 +82,12 @@ router.get('/dogs', async (req, res) => {
   const user = req.session.user;
   if (!user) return res.status(401).json({ error: 'Not logged in' });
   if (user.role !== 'owner' ) return res.status(403).json({ error: 'Forbidden' });
+
+  try {
+    const[rows] = await db.query(
+      
+    )
+  }
 })
 
 module.exports = router;
