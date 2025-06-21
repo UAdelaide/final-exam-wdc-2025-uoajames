@@ -1,5 +1,5 @@
 const express = require('express');
-const session = require('express-session'); // 
+const session = require('express-session'); // Store login state
 const path = require('path');
 require('dotenv').config();
 
