@@ -9,12 +9,10 @@
     <div id="load">
         <h1 style="text-align:right;font-size:90px;color:red;">dog of the day</h1>
         <img :src="imageUrl" alt="" v-if="imageUrl" style="position:absolute;top:10%;left:40%;border: 20px solid green" width="400" height="400"/>
+        <p></p>
         <button type="button" v-if="!clicked" @click="handleClick" style="position:absolute;top:20%;left:85%;font-size:11px;color:red">Button</button>
         <button type="button" v-else @click="handleClick" style="position:absolute;top:95%;left:10%;font-size:11px;color:blue">Load Button</button>
         <p style="position:absolute; top:25%;left:76%"><--- Click here</p>
-    </div>
-    <div>
-        
     </div>
     <script>
         Vue.createApp({
