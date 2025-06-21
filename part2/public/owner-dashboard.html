@@ -124,7 +124,6 @@
             const res = await fetch('/api/users/logout',  {
               method: 'POST',
               credentials: 'same-origin',
-              headers: { 'Content-Type': 'application/json' }
             });
             if (!res.ok) throw new Error('Logout failed');
             window.location.href = '/';
