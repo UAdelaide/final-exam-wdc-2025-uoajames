@@ -96,7 +96,9 @@
           });
           if (!res.ok) throw new Error('Not logged in');
           currentUser.value = await res.json();
-        } catch (err) 
+        } catch (err) {
+          error.value = err.message;
+        }
       }
 
         onMounted(() => {
