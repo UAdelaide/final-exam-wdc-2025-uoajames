@@ -41,6 +41,7 @@
 
     createApp({
       setup() {
+        const currentUser = ref(null);
         const walks = ref([]);
         const message = ref('');
         const error = ref('');
