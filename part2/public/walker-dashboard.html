@@ -89,9 +89,6 @@
           }
         }
 
-      const currentUser = ref(null);
-      const error = ref('');
-      const walks = ref
       async function getCurrentUser() {
         try {
           const res = await fetch('/api/users/me')
