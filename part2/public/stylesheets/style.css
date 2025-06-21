@@ -154,3 +154,11 @@ textarea {
 section {
     display: none;
 }
+
+table tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* light gray */
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* white */
+}
