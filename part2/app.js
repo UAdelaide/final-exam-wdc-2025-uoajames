@@ -17,14 +17,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
-// Dashboard Routes
-app.get('/owner-dashboard', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
-});
-app.get('/walker-dashboard', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'walker-dashboard.html'));
-});
-
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
