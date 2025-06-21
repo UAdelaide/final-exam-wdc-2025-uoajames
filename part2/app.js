@@ -19,7 +19,10 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 // Dashboard Routes
 app.get('/owner-dashboard', (req, res) => {
-    res.sendFile(path.join())
+    res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
+});
+app.get('/walker-dashboard', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
 });
 
 // Routes
