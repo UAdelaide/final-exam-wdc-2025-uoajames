@@ -9,7 +9,11 @@ router.get('/dogs', async (req, res) => {
 
     const response = await fetch('https://dog.ceo/api/breeds/image/random');
     const data = await response.json();
-    const randomImage = 
+    const randomImage = data.message;
+
+    res.json({ dogs, randomImage });
+    }
+    
 })
 
 module.exports = router;
