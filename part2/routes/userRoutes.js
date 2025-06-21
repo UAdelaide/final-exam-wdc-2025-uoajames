@@ -84,9 +84,9 @@ router.get('/dogs', async (req, res) => {
   if (user.role !== 'owner' ) return res.status(403).json({ error: 'Forbidden' });
 
   try {
-    const[rows] = await db.query(
-      
-    )
+    const[rows] = await db.query(`
+      SELECT dog_id, name FROM Dogs WHERE owner_id = ?',
+    `)
   }
 })
 
