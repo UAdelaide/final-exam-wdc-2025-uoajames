@@ -9,7 +9,7 @@ app.use(session({
     secret: 'DogWalkService',
     resave: false,
     saveUninitialized: false,
-    
+    cookie: { secure: false }
 }))
 
 // Middleware
