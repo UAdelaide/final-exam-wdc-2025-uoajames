@@ -11,7 +11,9 @@ router.get('/dogs', async (req, res) => {
         const randomImage = data.message;
 
         res.json({ dogs, randomImage });
-    } 
+    } catch (err) {
+        res.status(500).json({})
+    }
 })
 
 module.exports = router;
