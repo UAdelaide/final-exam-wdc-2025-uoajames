@@ -1,0 +1,7 @@
+/* Log In button styling */
+.login-btn {
+    color: white;
+    background-color: rgb(0, 149, 255);
+    border: 0px;
+    border-radius: 5px;
+}
