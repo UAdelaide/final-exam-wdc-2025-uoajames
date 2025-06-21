@@ -53,9 +53,9 @@ router.post('/login', async (req, res) => {
     req.session.user = user;
 
     if (user.role == 'owner') {
-      return res.redirect('/owner-dashboard');
+      return res.redirect(302, '/owner-dashboard');
     } else {
-      return res.redirect('/walker-dashboard');
+      return res.redirect(302, '/walker-dashboard');
     }
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });
