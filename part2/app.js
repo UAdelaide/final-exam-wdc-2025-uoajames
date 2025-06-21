@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
 // Dashboard Routes
-
+app.get('/owner-dashboard')
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
