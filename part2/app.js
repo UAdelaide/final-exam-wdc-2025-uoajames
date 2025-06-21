@@ -13,9 +13,9 @@ app.use(session({
 }));
 
 // Middleware
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
-app.use(express.urlencoded({}))
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
