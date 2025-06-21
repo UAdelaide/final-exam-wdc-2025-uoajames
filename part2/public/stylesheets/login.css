@@ -10,7 +10,7 @@
 .container {
     display: grid;
     place-content: center;
-    width: 400px;
+    width: 450px;
     text-align: center;
 }
 
