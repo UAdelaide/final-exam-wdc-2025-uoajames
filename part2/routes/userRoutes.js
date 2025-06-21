@@ -89,6 +89,9 @@ router.get('/dogs', async (req, res) => {
       [user.user_id]
   );
   res.json(rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: ''})
   }
 })
 
