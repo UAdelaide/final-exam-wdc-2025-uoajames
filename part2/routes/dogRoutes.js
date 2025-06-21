@@ -11,8 +11,8 @@ router.get('/dogs', async (req, res) => {
         const randomImage = data.message;
 
         res.json({ dogs, randomImage });
-    } catch (err) {
-        res.status(500).json({})
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to fetch dog image' });
     }
 })
 
