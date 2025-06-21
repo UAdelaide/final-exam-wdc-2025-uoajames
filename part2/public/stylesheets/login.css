@@ -15,8 +15,13 @@
     text-align: center;
 }
 
-/* Make text boxes fill in div */
-.element {
-    width: 100%;
-}
 
+/* Make form inputs fill width of the form */
+form.element input[type="text"],
+form.element input[type="password"] {
+  width: 100%;
+  padding: 0.6em;
+  font-size: 1em;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
