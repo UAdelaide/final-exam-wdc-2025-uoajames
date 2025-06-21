@@ -5,3 +5,12 @@
     border: 0px;
     border-radius: 5px;
 }
+
+/*  */
+.centered-body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
