@@ -56,7 +56,7 @@ router.post('/login', async (req, res) => {
       return res.redirect('/owner-dashboard');
     } else {
       return res.redirect('/walker-dashboard');
-    }
+    };
 
     res.json({ message: 'Login successful', user: rows[0] });
   } catch (error) {
