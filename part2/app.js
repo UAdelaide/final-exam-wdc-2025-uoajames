@@ -10,7 +10,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
     cookie: { secure: false }
-}))
+}));
 
 // Middleware
 app.use(express.json());
