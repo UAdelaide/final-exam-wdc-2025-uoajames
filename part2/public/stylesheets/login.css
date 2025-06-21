@@ -10,5 +10,5 @@
 .container {
     display: grid;
     place-content: center;
-    width: 300px;
+    width: 400px;
 }
