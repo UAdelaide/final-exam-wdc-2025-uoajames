@@ -99,8 +99,8 @@
               headers: { 'Content-Type': 'application/json' }
             });
             if (!res.ok) throw new Error('Logout failed');
-            
-          }
+            window.location.href = '/';
+          } catch (err)
         }
 
         async function submitWalkRequest() {
