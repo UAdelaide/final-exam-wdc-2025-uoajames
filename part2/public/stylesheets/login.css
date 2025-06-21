@@ -25,3 +25,7 @@ form.element input[type="password"] {
   margin-bottom: 1rem;
   box-sizing: border-box;
 }
+
+form.element {
+  text-align: left; /* ensures button is left-aligned even in center-aligned containers */
+}
