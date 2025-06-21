@@ -155,6 +155,7 @@ section {
     display: none;
 }
 
+/* Logout button styling */
 .logout-btn {
     background-color: rgb(255,56,56);
 }
