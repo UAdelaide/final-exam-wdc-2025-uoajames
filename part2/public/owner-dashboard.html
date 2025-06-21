@@ -141,8 +141,9 @@
         async function loadDogs() {
           try {
             const res = await fetch('/api/dogs/ownedDogs', {
-              m
-            })
+              credentials: 'same-origin'
+            });
+            if (!res.ok) throw new Error('Failed to load dogs');
           }
         }
 
