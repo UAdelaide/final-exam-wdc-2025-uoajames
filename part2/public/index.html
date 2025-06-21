@@ -76,7 +76,9 @@
           );
 
           this.dogs = dogsImage;
-        } catch (err)
+        } catch (err) {
+          console.error('Failed to fetch dog list', err);
+        }
       }
     }).mount('#app');
   </script>
