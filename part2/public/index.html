@@ -61,10 +61,10 @@
       async mounted() {
         try {
           const res = await fetch('/api/dogs');
-          const dogList = await res.json();
+          const { dog } = await res.json();
 
           const dogImage = await Promise.all(
-            dogList.map(async (dog) => {
+            dogs.map(async (dog) => {
               try {
                 const imgRes = await fetch('https://dog.ceo/api/breeds/image/random');
                 const imgData = await imgRes.json();
