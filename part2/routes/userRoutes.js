@@ -56,9 +56,10 @@ router.post('/login', async (req, res) => {
       return res.redirect('/owner-dashboard');
     } else {
       return res.redirect('/walker-dashboard');
-    } catch (error) {
-      res.status(500).json({ error: 'Login failed' });
     }
+  } catch (error) {
+    res.status(500).json({ error: 'Login failed' });
+  }
 });
 
 module.exports = router;
