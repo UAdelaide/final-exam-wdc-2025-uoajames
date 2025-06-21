@@ -146,12 +146,13 @@
             if (!res.ok) throw new Error('Failed to load dogs');
             dogs.value = await res.json();
           } catch (err) {
-            
+            error.value = err.message;
           }
         }
 
         onMounted(() => {
           loadWalks();
+          loadDogs();
         });
 
         return {
@@ -161,6 +162,7 @@
           error,
           submitWalkRequest,
           logout // Include 'logout' for it to run
+          dogs
         };
       }
     }).mount('#app');
