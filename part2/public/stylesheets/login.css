@@ -12,6 +12,7 @@
     place-content: center;
     width: 400px;
     border: 3px solid black;
+    text-align: center;
 }
 
 /* Make text boxes fill in div */
