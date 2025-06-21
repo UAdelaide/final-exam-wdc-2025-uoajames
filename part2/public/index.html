@@ -64,7 +64,11 @@
           const dogList = await res.json();
 
           const dogImage = await Promise.all(
-            
+            dogList.map(async (dog) => {
+              try {
+                const imgRes = await fetch()
+              }
+            })
           )
         }
       }
