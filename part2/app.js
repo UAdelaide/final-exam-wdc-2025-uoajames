@@ -6,7 +6,10 @@ require('dotenv').config();
 const app = express();
 
 app.use(session({
-    secret: ''
+    secret: 'DogWalkService',
+    resave: false,
+    saveUninitialized: false,
+    
 }))
 
 // Middleware
