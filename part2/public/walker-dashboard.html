@@ -58,7 +58,7 @@
 
         async function applyToWalk(requestId) {
           try {
-            // Replace hardcoded 
+            // Replace hardcoded user with current user information
             const user = currentUser.value;
             if (!user) throw new Error('No user logged in');
 
