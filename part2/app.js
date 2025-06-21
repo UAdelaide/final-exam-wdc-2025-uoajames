@@ -22,7 +22,7 @@ app.get('/owner-dashboard', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
 });
 app.get('/walker-dashboard', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
+    res.sendFile(path.join(__dirname, 'public', 'walker-dashboard.html'));
 });
 
 // Routes
