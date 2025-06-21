@@ -92,8 +92,9 @@
       async function getCurrentUser() {
         try {
           const res = await fetch('/api/users/me', {
-            credentials
-          }
+            credentials: 'same-origin'
+          });
+          if (!res.ok) throw new Error('Not logged in')
         }
       }
 
