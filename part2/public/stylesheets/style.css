@@ -159,5 +159,6 @@ section {
     height: 100vh;
     margin: 0;
     display: flex;
-    justify-content: 
+    justify-content: center;
+    align-items: center;
 }
