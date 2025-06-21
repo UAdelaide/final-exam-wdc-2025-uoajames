@@ -5,7 +5,7 @@ require('dotenv').config();
 
 const app = express();
 
-// To store user info
+// To store user info, keeping them logged in
 app.use(session({
     secret: 'DogWalkService',
     resave: false,
