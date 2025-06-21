@@ -7,10 +7,7 @@
 }
 
 /* Centering the body */
-.centered-container {
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container {
+    display: grid;
+    place-content: center;
 }
