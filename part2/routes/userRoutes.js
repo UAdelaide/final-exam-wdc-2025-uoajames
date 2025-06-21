@@ -78,6 +78,7 @@ router.post('/logout', (req, res) => {
   });
 });
 
+// GET 
 router.get('/dogs', async (req, res) => {
   const user = req.session.user;
   if (!user) return res.status(401).json({ error: 'Not logged in' });
@@ -91,8 +92,8 @@ router.get('/dogs', async (req, res) => {
   res.json(rows);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: ''})
+    res.status(500).json({ error: 'Failed to load dogs '});
   }
-})
+});
 
 module.exports = router;
